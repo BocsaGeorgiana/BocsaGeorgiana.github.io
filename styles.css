@@ -632,132 +632,93 @@ body {
 
 
 /* contexts */
-/* Container styling */
 .timeline-container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px;
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
 }
 
-/* Section title */
 h2.section-title {
-    font-size: 2.4rem;
+    font-size: 2rem;
     text-align: center;
     color: #e08976;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 /* Timeline styling */
 .timeline {
     position: relative;
-    padding-left: 50px;
+    padding-left: 10px;
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
-/* Date/marker styling */
-.timeline-date {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #e08976;
-    position: absolute;
-    left: -100px;
-    top: 0;
-    background-color: white;
-    padding: 8px 15px;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Timeline content styling */
+/* Timeline content */
 .timeline-content {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 80%;
+    padding: 15px;
+    width: 85%;
+    margin-right: 5%;
 }
 
-/* Even items' content */
-.timeline-item:nth-child(even) .timeline-content {
-    background-color: #f1f1f1;
-    margin-left: 100px;
-}
-
-/* Odd items' content */
+/* Alternating layout for desktop */
 .timeline-item:nth-child(odd) .timeline-content {
-    background-color: #fff;
+    margin-left: auto;
 }
 
-/* Timeline heading */
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 0;
+}
+
+/* Headings and paragraphs */
 .timeline-content h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #e08976;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-/* Timeline paragraph */
 .timeline-content p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #555;
     line-height: 1.6;
 }
 
-
-/* For medium devices, adjust layout */
+/* Small screen improvements */
 @media (max-width: 768px) {
-    .timeline-date {
-        left: 0;
-        top: -20px;
-    }
-
-    .timeline-item {
-        margin-left: 0;
-    }
-
     .timeline-content {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .timeline-container {
-        padding: 20px;
-    }
-
-    h2.section-title {
-        font-size: 1.8rem;
-    }
-
-    .timeline-item {
-        margin-bottom: 30px;
-    }
-}
-
-/* For small devices, adjust further */
-@media (max-width: 480px) {
-    .timeline-date {
-        left: 0;
-        top: -10px;
-    }
-
-    .timeline-content h3 {
-        font-size: 1.5rem;
-    }
-
-    .timeline-content p {
-        font-size: 0.9rem;
-    }
-
-    .timeline-container {
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
         padding: 15px;
     }
 
     .timeline-item {
         margin-bottom: 25px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-content {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .timeline-item {
+        margin-bottom: 20px;
     }
 }

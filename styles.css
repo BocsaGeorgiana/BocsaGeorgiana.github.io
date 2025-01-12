@@ -39,7 +39,6 @@ body {
     color: #FFFFFF;
     padding: 10px 15px;
     border-radius: 5px;
-    /* transition: background 0.3s ease, transform 0.3s ease; */
     text-decoration: none;
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -56,10 +55,59 @@ body {
 }
 
 .main {
-    margin-top: 80px;
-    /* To prevent overlap with fixed header */
-    padding: 20px;
+    padding: 100px 20px 20px;
 }
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 1500px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333333;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .nav-list li {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-list li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-list li a {
+        padding: 15px;
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
 
 /* home */
 .video-container {
